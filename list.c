@@ -105,18 +105,11 @@ void * popBack(List * list) {
 
 void * popCurrent(List * list) {
   void* elim = list->current->data;
-  if (list->current->prev){
-    list->current->prev->next = list->current->next;
-    if (list->current->next)
-      list->current->next->prev = list->current->prev;
-  }
-  else{
-    list->head = list->current->next;
-    if (list->head)
-      list->head->prev = NULL;
-    else
-      list->tail = NULL;
-  }
+  Node* izq = list->current->prev;
+  Node* der = list->current->next;
+  izq->next = der;
+  der->prev = izq;
+  free(list->current);
   return elim;
 }
 
