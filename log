@@ -55,3 +55,23 @@ list.c:40:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 e0d5300
+Thu 28 Mar 2024 07:24:41 PM UTC: 
+ list.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:33:8: error: ‘lista’ is a pointer; did you mean to use ‘->’?
+   33 |   lista.head = NULL;
+      |        ^
+      |        ->
+list.c: In function ‘firstList’:
+list.c:41:10: error: dereferencing ‘void *’ pointer [-Werror]
+   41 |   return *dato;
+      |          ^~~~~
+list.c:41:10: error: void value not ignored as it ought to be
+list.c:42:1: error: control reaches end of non-void function [-Werror=return-type]
+   42 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+23f381c
