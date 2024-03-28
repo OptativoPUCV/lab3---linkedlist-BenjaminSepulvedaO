@@ -40,6 +40,8 @@ void * firstList(List * list) {
   //void* dato = list->current->data;
   if (list->current) 
     return list->current->data;
+  else
+    return NULL;
 }
 
 void * nextList(List * list) {
