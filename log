@@ -1,0 +1,11 @@
+Thu 28 Mar 2024 07:15:56 PM UTC: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:32:11: error: unused variable ‘lista’ [-Werror=unused-variable]
+   32 |    List * lista = (List *)malloc(sizeof(List));
+      |           ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+d0cb38c
