@@ -74,10 +74,6 @@ void pushFront(List * list, void * data) {
   newNode->next = list->head;
   if (list->head)
     list->head->prev = newNode;
-  if (list->tail){
-    list->tail = list->head;
-    printf("Hola");
-  }
   list->head = newNode;
 }
 
