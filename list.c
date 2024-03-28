@@ -114,6 +114,13 @@ void * popCurrent(List * list) {
     else
       list->tail = izq;
   }
+  else{
+    list->head = der;
+    if (der)
+      der->prev = NULL;
+    else
+      list->tail = NULL;
+  }
   return elim;
 }
 
